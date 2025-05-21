@@ -1,3 +1,8 @@
+---
+description: Creating or editing files or using the relationship between them
+globs: 
+alwaysApply: false
+---
 This is the file structure that needs to be maintained and if it needs to change it needs to be documented Here
 
 Okay, here's a comprehensive layout of a potential file structure for the Ansuz project, assuming a Python-based application (common for scripting, text processing, and API integrations). This structure aims for modularity and clarity, suitable for an MVP and scalable for future enhancements.

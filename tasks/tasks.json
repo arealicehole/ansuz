@@ -8,7 +8,54 @@
       "dependencies": [],
       "priority": "high",
       "details": "Create a new Python project with the following structure:\n- main.py (entry point)\n- /src directory for core modules\n- /tests directory for unit tests\nInstall required packages: requests, python-dotenv for environment variables, jinja2 for HTML templating. Set up configuration for LLM API keys (OpenAI or similar). Create basic module structure for input handling, LLM processing, content structuring, and HTML generation.",
-      "testStrategy": "Verify project structure is correctly set up. Confirm all dependencies install without conflicts. Test environment variable loading for API keys."
+      "testStrategy": "Verify project structure is correctly set up. Confirm all dependencies install without conflicts. Test environment variable loading for API keys.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create Project Directory Structure",
+          "description": "Establish the foundational folder structure for the Ansuz project, including the main entry point and directories for source code and tests.",
+          "details": "Create the root project folder ansuz (if not already existing from workspace setup).\nInside ansuz, create main.py.\nCreate a subdirectory named src/.\nCreate a subdirectory named tests/.\n(Optional but good practice) Add empty __init__.py files to the src/ and tests/ directories to mark them as Python packages.",
+          "status": "done",
+          "dependencies": [],
+          "parentTaskId": 1
+        },
+        {
+          "id": 2,
+          "title": "Initialize Dependency Management and Install Core Libraries",
+          "description": "Set up Python virtual environment, install the primary required libraries (requests, python-dotenv, jinja2), and document these dependencies.",
+          "details": "Ensure a Python virtual environment is created and activated for the project.\nInstall the following packages using pip: requests, python-dotenv, jinja2.\nGenerate a requirements.txt file (e.g., using pip freeze > requirements.txt) to list the installed packages and their versions.",
+          "status": "pending",
+          "dependencies": [],
+          "parentTaskId": 1
+        },
+        {
+          "id": 3,
+          "title": "Configure API Key Management",
+          "description": "Implement a secure way to manage LLM API keys using python-dotenv, including an example environment file and gitignore configuration.",
+          "details": "Create a file named .env.example in the project root. This file should include a placeholder for the LLM API key (e.g., OPENAI_API_KEY=YOUR_API_KEY_HERE).\nCreate or update the .gitignore file in the project root to include .env. This prevents the actual API keys from being committed to version control.\nOptionally, create a basic configuration module (e.g., src/config.py) that demonstrates how to load the API key from the .env file using python-dotenv.",
+          "status": "pending",
+          "dependencies": [],
+          "parentTaskId": 1
+        },
+        {
+          "id": 4,
+          "title": "Create Basic Module Structure",
+          "description": "Lay out the initial placeholder Python files or modules within the /src directory for the main functional components of the application as outlined in Task 1's details.",
+          "details": "Inside the src/ directory, create the following Python files (or sub-directories if a more complex module structure is immediately envisioned):\n- input_handler.py (for input processing)\n- llm_processor.py (for LLM interaction)\n- content_structurer.py (for organizing content)\n- html_generator.py (for producing HTML output)\nThese files can be initially empty or contain minimal placeholder code (e.g., an empty class definition or a pass statement).",
+          "status": "pending",
+          "dependencies": [],
+          "parentTaskId": 1
+        },
+        {
+          "id": 5,
+          "title": "Set up Basic Test Infrastructure",
+          "description": "Install a testing framework like pytest and create a simple placeholder test to ensure the testing setup is functional.",
+          "details": "Install pytest (e.g., pip install pytest) and add it to requirements.txt.\nOptionally, create a basic pytest.ini or pyproject.toml (if using modern Python project setup) for pytest configuration.\nIn the tests/ directory, create a simple test file (e.g., test_initial_setup.py) with a placeholder test case (e.g., def test_truth(): assert True).",
+          "status": "pending",
+          "dependencies": [],
+          "parentTaskId": 1
+        }
+      ]
     },
     {
       "id": 2,

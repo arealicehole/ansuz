@@ -13,3 +13,50 @@ Install required packages: requests, python-dotenv for environment variables, ji
 
 # Test Strategy:
 Verify project structure is correctly set up. Confirm all dependencies install without conflicts. Test environment variable loading for API keys.
+
+# Subtasks:
+## 1. Create Project Directory Structure [pending]
+### Dependencies: None
+### Description: Establish the foundational folder structure for the Ansuz project, including the main entry point and directories for source code and tests.
+### Details:
+Create the root project folder ansuz (if not already existing from workspace setup).
+Inside ansuz, create main.py.
+Create a subdirectory named src/.
+Create a subdirectory named tests/.
+(Optional but good practice) Add empty __init__.py files to the src/ and tests/ directories to mark them as Python packages.
+
+## 2. Initialize Dependency Management and Install Core Libraries [pending]
+### Dependencies: None
+### Description: Set up Python virtual environment, install the primary required libraries (requests, python-dotenv, jinja2), and document these dependencies.
+### Details:
+Ensure a Python virtual environment is created and activated for the project.
+Install the following packages using pip: requests, python-dotenv, jinja2.
+Generate a requirements.txt file (e.g., using pip freeze > requirements.txt) to list the installed packages and their versions.
+
+## 3. Configure API Key Management [pending]
+### Dependencies: None
+### Description: Implement a secure way to manage LLM API keys using python-dotenv, including an example environment file and gitignore configuration.
+### Details:
+Create a file named .env.example in the project root. This file should include a placeholder for the LLM API key (e.g., OPENAI_API_KEY=YOUR_API_KEY_HERE).
+Create or update the .gitignore file in the project root to include .env. This prevents the actual API keys from being committed to version control.
+Optionally, create a basic configuration module (e.g., src/config.py) that demonstrates how to load the API key from the .env file using python-dotenv.
+
+## 4. Create Basic Module Structure [pending]
+### Dependencies: None
+### Description: Lay out the initial placeholder Python files or modules within the /src directory for the main functional components of the application as outlined in Task 1's details.
+### Details:
+Inside the src/ directory, create the following Python files (or sub-directories if a more complex module structure is immediately envisioned):
+- input_handler.py (for input processing)
+- llm_processor.py (for LLM interaction)
+- content_structurer.py (for organizing content)
+- html_generator.py (for producing HTML output)
+These files can be initially empty or contain minimal placeholder code (e.g., an empty class definition or a pass statement).
+
+## 5. Set up Basic Test Infrastructure [pending]
+### Dependencies: None
+### Description: Install a testing framework like pytest and create a simple placeholder test to ensure the testing setup is functional.
+### Details:
+Install pytest (e.g., pip install pytest) and add it to requirements.txt.
+Optionally, create a basic pytest.ini or pyproject.toml (if using modern Python project setup) for pytest configuration.
+In the tests/ directory, create a simple test file (e.g., test_initial_setup.py) with a placeholder test case (e.g., def test_truth(): assert True).
+
