@@ -1,0 +1,16 @@
+# Task ID: 6
+# Title: Implement YouTube transcript fetching
+# Status: pending
+# Dependencies: 2
+# Priority: medium
+# Description: Add functionality to accept YouTube URLs and fetch their transcripts for processing.
+# Details:
+Extend the InputHandler class to:
+- Accept and validate YouTube URLs
+- Integrate with youtube-transcript-api library
+- Fetch available transcripts for valid videos
+- Handle various transcript formats
+Implement URL validation to ensure only valid YouTube URLs are processed. Add logic to select the best available transcript if multiple are available (e.g., manual over auto-generated). Handle authentication if needed for accessing certain transcripts.
+
+# Test Strategy:
+Test with various YouTube videos: with transcripts, without transcripts, private videos, invalid URLs. Verify correct transcript retrieval and appropriate error messages.

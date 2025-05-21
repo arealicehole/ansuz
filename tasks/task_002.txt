@@ -1,0 +1,16 @@
+# Task ID: 2
+# Title: Implement text input handling
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Create functionality to accept and process raw text input from users, either pasted directly or uploaded as a file.
+# Details:
+Develop an InputHandler class with methods for:
+- Processing pasted text input
+- Reading and validating text files (.txt)
+- Basic text cleaning/normalization
+- Input validation (checking for empty input, minimum length)
+Implement a simple CLI interface that prompts users to either paste text or provide a file path. For file handling, use standard Python file operations with proper error handling for file not found or permission issues.
+
+# Test Strategy:
+Test with various text inputs including empty strings, very short texts, and longer transcripts. Test file reading with valid and invalid file paths. Verify input validation correctly identifies problematic inputs.

@@ -1,0 +1,15 @@
+# Task ID: 1
+# Title: Set up project structure and core dependencies
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Initialize the Ansuz project with necessary dependencies for text processing, LLM integration, and HTML generation.
+# Details:
+Create a new Python project with the following structure:
+- main.py (entry point)
+- /src directory for core modules
+- /tests directory for unit tests
+Install required packages: requests, python-dotenv for environment variables, jinja2 for HTML templating. Set up configuration for LLM API keys (OpenAI or similar). Create basic module structure for input handling, LLM processing, content structuring, and HTML generation.
+
+# Test Strategy:
+Verify project structure is correctly set up. Confirm all dependencies install without conflicts. Test environment variable loading for API keys.

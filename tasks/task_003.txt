@@ -1,0 +1,16 @@
+# Task ID: 3
+# Title: Implement LLM integration for topic segmentation
+# Status: pending
+# Dependencies: 1, 2
+# Priority: high
+# Description: Integrate with an LLM API to analyze transcripts, identify topics, and generate appropriate headings.
+# Details:
+Create an LLMProcessor class that:
+- Connects to the chosen LLM API (OpenAI recommended)
+- Constructs effective prompts for topic segmentation as outlined in the PRD appendix
+- Handles API responses and errors
+- Parses LLM output into a structured format
+The prompt should emphasize preserving original wording while identifying logical topic breaks. Implement a data structure to hold the segmented content (e.g., a list of dictionaries with 'heading' and 'content' keys). Include retry logic for API failures and timeout handling.
+
+# Test Strategy:
+Test with sample transcripts of varying length and complexity. Verify that topics are logically identified and that original wording is preserved. Check error handling by simulating API failures.

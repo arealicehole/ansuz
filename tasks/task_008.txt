@@ -1,0 +1,16 @@
+# Task ID: 8
+# Title: Refine LLM prompts for better topic segmentation
+# Status: pending
+# Dependencies: 3, 4
+# Priority: low
+# Description: Iterate on and improve the LLM prompts to achieve more accurate topic segmentation and better heading quality.
+# Details:
+Analyze results from initial implementation and refine prompts by:
+- Testing variations of prompt wording and structure
+- Adding examples of good segmentation in the prompt
+- Adjusting temperature or other LLM parameters
+- Potentially implementing a multi-step approach (first identify themes, then segment)
+Create a PromptLibrary class to manage different prompt templates and versions. Implement A/B testing to compare prompt effectiveness. Document the evolution of prompts and their impact on results.
+
+# Test Strategy:
+Compare results from different prompts using the same input transcripts. Evaluate heading quality, topic coherence, and segmentation accuracy. Get feedback from test users on the organization quality.
