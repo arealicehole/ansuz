@@ -1,5 +1,17 @@
-from dotenv import load_dotenv
 import os
+
+try:
+    from dotenv import load_dotenv  # type: ignore
+except Exception:  # pragma: no cover - fallback when package missing
+    def load_dotenv(path: str = ".env") -> None:
+        """Simple dotenv loader used when python-dotenv is unavailable."""
+        if not os.path.exists(path):
+            return
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                if "=" in line:
+                    key, value = line.strip().split("=", 1)
+                    os.environ.setdefault(key, value)
 
 
 def load_config(env_file: str = ".env") -> dict:
