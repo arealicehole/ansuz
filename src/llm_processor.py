@@ -12,4 +12,13 @@ class LLMProcessor:
 
     def call_api(self, prompt: str) -> str:
         """Send ``prompt`` to the LLM and return its response."""
-        raise NotImplementedError
+        # This is a lightweight stub used for development and testing
+        # without making actual API requests.
+        _ = prompt  # acknowledge the prompt without using it
+        return {
+            "topics": [
+                "Introduction",
+                "Main Discussion",
+                "Conclusion",
+            ]
+        }

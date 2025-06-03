@@ -12,4 +12,21 @@ class ContentStructurer:
 
     def organize_segments(self, transcript: str, analysis: dict) -> list:
         """Return a structured representation of ``transcript``."""
-        raise NotImplementedError
+        headings = analysis.get("topics", []) if analysis else []
+
+        paragraphs = [p.strip() for p in transcript.split("\n\n") if p.strip()]
+
+        if not headings:
+            return [{"heading": None, "content": paragraphs}]
+
+        structure = []
+        num_headings = len(headings)
+        for i, heading in enumerate(headings):
+            start = i * len(paragraphs) // num_headings
+            end = (i + 1) * len(paragraphs) // num_headings
+            structure.append({
+                "heading": heading,
+                "content": paragraphs[start:end],
+            })
+
+        return structure

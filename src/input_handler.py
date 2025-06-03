@@ -19,11 +19,15 @@ class InputHandler:
         text: str
             Raw text supplied by the user.
         """
-        raise NotImplementedError
+        # Strip leading/trailing whitespace and collapse internal
+        # whitespace to single spaces for a basic normalization.
+        cleaned = " ".join(text.split())
+        return cleaned
 
     def read_file(self, file_path: str) -> str:
         """Read text from ``file_path`` and return its contents."""
-        raise NotImplementedError
+        with open(file_path, "r", encoding="utf-8") as fh:
+            return fh.read()
 
     def validate_input(self, text: str) -> bool:
         """Validate provided text input.
@@ -31,4 +35,4 @@ class InputHandler:
         This check will ensure the text is not empty and meets any
         additional criteria defined in future development.
         """
-        raise NotImplementedError
+        return bool(text and text.strip())
