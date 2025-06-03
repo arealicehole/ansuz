@@ -19,15 +19,12 @@ class InputHandler:
         text: str
             Raw text supplied by the user.
         """
-        # Strip leading/trailing whitespace and collapse internal
-        # whitespace to single spaces for a basic normalization.
-        cleaned = " ".join(text.split())
-        return cleaned
+        return text.strip()
 
     def read_file(self, file_path: str) -> str:
         """Read text from ``file_path`` and return its contents."""
-        with open(file_path, "r", encoding="utf-8") as fh:
-            return fh.read()
+        with open(file_path, "r", encoding="utf-8") as f:
+            return f.read()
 
     def validate_input(self, text: str) -> bool:
         """Validate provided text input.
